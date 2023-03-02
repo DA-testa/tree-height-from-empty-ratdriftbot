@@ -31,7 +31,7 @@ def main():
         parents =list(map(int, input().split()))
     elif "F" in words:
         name = input()
-        path='./tets/'
+        path='./test/'
         file = path + name 
         if "a" not in name:
             try:
