@@ -7,10 +7,10 @@ import numpy
 
 def compute_height(k, parents):
     vieta = [[] for _ in range(k)]
-    path = None 
+    root = None 
     for i in range(k):
         if parents[i] == -1:
-            path = i
+            root = i
         else:
                 vieta[parents [i]].append(i)
     
@@ -32,13 +32,13 @@ def main():
         parents =list(map(int, input().split()))
     elif "F" in words:
         name = input()
-        root='./tets/'
+        path='./tets/'
         file = root + name 
         if "a" not in name:
             try:
                 with open(file) as f:
                     k=int(f.readline())
-                    parents =list(map(int, f.readline().split()))
+                    parents =list(map(int,f.readline().split()))
             except Exception as e:
                 print("error",str(e))
                 return
