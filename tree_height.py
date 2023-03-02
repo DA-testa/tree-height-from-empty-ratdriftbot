@@ -12,7 +12,7 @@ def compute_height(k, parents):
         if parents[i] == -1:
             root = i
         else:
-                vieta[parents [i]].append(i)
+            vieta[parents [i]].append(i)
     
     def max_height(r):
         height = 1
@@ -20,9 +20,9 @@ def compute_height(k, parents):
             return height 
         else:
             for child in vieta[r]:
-                height = max (height, max_height(child))
+                height = max (height,max_height(child))
             return height + 1
-    return max_height(path)
+    return max_height(root)
 
 
 def main():
@@ -33,7 +33,7 @@ def main():
     elif "F" in words:
         name = input()
         path='./tets/'
-        file = root + name 
+        file = path + name 
         if "a" not in name:
             try:
                 with open(file) as f:
