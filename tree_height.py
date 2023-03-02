@@ -24,7 +24,6 @@ def compute_height(k, parents):
             return height + 1
     return max_height(root)
 
-
 def main():
     words =input ("F or I:")
     if "I" in words:
