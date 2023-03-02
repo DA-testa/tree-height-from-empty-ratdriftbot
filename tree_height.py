@@ -6,23 +6,23 @@ import numpy
 
 
 def compute_height(k, parents):
-    location = [[] for _ in range(k)]
+    vieta = [[] for _ in range(k)]
     path = None 
     for i in range(k):
         if parents[i] ==-1:
             path = 1
             else:
-                place[parents [i]].append(i)
+                vieta[parents [i]].append(i)
     
     def max_height(r):
         heigh = 1
-        if not place [r]:
+        if not vieta [r]:
             return height 
         else:
-            for baby in place[r]:
-                heigh = max (heigh, max_height(baby))
+            for child in vieta[r]:
+                heigh = max (heigh, max_height(child))
             return height + 1
-    return max_height(root)
+    return max_height(path)
 
 
 def main():
