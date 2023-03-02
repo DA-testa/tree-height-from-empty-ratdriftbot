@@ -11,7 +11,7 @@ def compute_height(k, parents):
     for i in range(k):
         if parents[i] == -1:
             path = i
-            else:
+        else:
                 vieta[parents [i]].append(i)
     
     def max_height(r):
@@ -38,13 +38,13 @@ def main():
             try:
                 with open(file) as f:
                     k=int(f.readline())
-                    parents =list (map(int, f.readline().split()))
+                    parents =list(map(int, f.readline().split()))
             except Exception as e:
                 print("error",str(e))
                 return
         else:
-                print("error")
-                return 
+            print("error")
+            return 
 
     print(compute_height(k,parents))
 
